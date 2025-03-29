@@ -1,5 +1,6 @@
 language = "python"
 run = "python app.py"
+modules = ["python-3.11"]
 [nix]
 channel = "stable-24_05"
 
@@ -26,3 +27,7 @@ mode = "sequential"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "python3 app.py"
+
+[[ports]]
+localPort = 8080
+externalPort = 80
